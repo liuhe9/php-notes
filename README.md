@@ -20,10 +20,7 @@ $ sysctl -w kern.maxfilesperproc=20480
 kern.maxfiles=20480000 kern.maxfilesperproc=20480000
 $ ulimit -S -n
 10240
-$ ulimit -S -n 20480000
+$ ulimit -S -n 204800
 $ ulimit -S -n
-20480000
+204800
 ```
-
-
-
