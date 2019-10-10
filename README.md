@@ -32,11 +32,12 @@ $ ulimit -S -n
 netstat -ntpl | grep 6379
 ```
 + 内存不够，交换空间
+```
 sudo fallocate -l 3G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
-
+```
 + mysql 8
 ```
 sudo wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.13-1_all.deb 
@@ -93,7 +94,7 @@ sudo apt-get install -y nginx
 sudo apt-get autoremove -y apache2
 ```
 
-+发布脚本
++ 发布脚本
 ```
 <?php
 namespace Deployer;
