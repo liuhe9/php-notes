@@ -150,5 +150,15 @@ sudo redis-cli /etc/redis/redis.conf
 bind 127.0.0.1
 ```
 
-### nginx,指定环境变量,larvavel判断 .env  .env.development
-fastcgi_param  APP_ENV development;
+### nginx,指定环境变量,larvavel判断 .env  .env.local
+fastcgi_param  APP_ENV local;
+
+
+### mac 更新到catalina  根目录只读，read-only filesystem
++关闭sip https://www.jianshu.com/p/fe78d2036192 按步骤来
++执行自启动脚本mount https://jingyan.baidu.com/article/9c69d48fe7a2c913c9024eb6.html
+start.sh 脚本代码
+```
+#!/bin/bash 
+echo "sudo密码" | sudo -S mount -uw /
+```
