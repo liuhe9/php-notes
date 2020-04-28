@@ -188,3 +188,4 @@ echo "sudo密码" | sudo -S mount -uw /
 ```
 
 静态代码扫码神器   sonarlint，扫描完直接出报告，防止代码低级错误
+docker镜像名 sonarqube
