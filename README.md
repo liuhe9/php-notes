@@ -189,3 +189,36 @@ echo "sudo密码" | sudo -S mount -uw /
 
 静态代码扫码神器   sonarlint，扫描完直接出报告，防止代码低级错误
 docker镜像名 sonarqube
+
+### windows下安装cnpm
+1、下载 nodejs  http://nodejs.cn/download/
+2、
+```
+npm -v
+```
+3、配置npm的全局模块的存放路径、cache的路径
+```
+npm config set prefix "E:\liuhe\nodejs\node_global"
+npm config set cache "E:\liuhe\nodejs\node_cache"
+```
+4、环境变量
+我的电脑右击，打开属性->高级系统设置->环境变量->新建【系统变量下】->输入变量名NODE_PATH->变量值
+```
+NODE_PATH  E:\liuhe\nodejs\node_global
+PATH E:\liuhe\nodejs\node_global
+```
+5、安装淘宝包管理cnpm，主要为了速度快 
+```
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+```
+6、查看是否安装成功
+```
+cnpm -v
+```
+7、如果6出现
+无法加载文件 E:\liuhe\nodejs\node_global\cnpm.ps1，因为在此系统中禁止执行脚本。有关详细信息，请参阅 "get-help about_signing"
+8、windows键搜索 powershell x86版本的，运行
+```
+set-ExecutionPolicy RemoteSigned
+```
+9、新开个powershell运行6即可
